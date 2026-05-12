@@ -21,6 +21,9 @@ Artinya publisher dan subscriber terhubung ke RabbitMQ yang sama, yaitu RabbitMQ
 
 ![rabbitmq](rabbitmq.png)
 
+## Sending and Processing Event
+
+![alt text](image-3.png)
 
 ## Simulation Slow Subscriber
 
