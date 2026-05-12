@@ -20,3 +20,13 @@ Artinya publisher dan subscriber terhubung ke RabbitMQ yang sama, yaitu RabbitMQ
 ## RabbitMQ Management
 
 ![rabbitmq](rabbitmq.png)
+
+
+## Simulation Slow Subscriber
+
+Setelah menjalankan publisher beberapa kali, grafik laju pesan (message rate) di RabbitMQ menunjukkan adanya lonjakan (spikes). Lonjakan ini terjadi karena setiap kali publisher dieksekusi, ia mengirimkan lima event ke message broker. Semakin sering publisher dijalankan, semakin banyak pula pesan yang terkirim, sehingga grafik mengalami kenaikan sementara.
+
+![rabbitmq-slow](image-2.png)
+![slow-pub](image.png)
+![slow-subs](image-1.png)
+
