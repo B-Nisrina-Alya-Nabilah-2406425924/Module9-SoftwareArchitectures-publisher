@@ -33,3 +33,13 @@ Setelah menjalankan publisher beberapa kali, grafik laju pesan (message rate) di
 ![slow-pub](image.png)
 ![slow-subs](image-1.png)
 
+## Reflection and Running at Least Three Subscribers
+
+Saya menjalankan tiga instans subscriber secara bersamaan. Semua subscriber tersebut mendengarkan antrean (queue) user_created yang sama. Ketika publisher mengirimkan pesan, RabbitMQ mendistribusikan pesan-pesan tersebut ke seluruh subscriber yang tersedia. Hal ini menunjukkan bahwa arsitektur berbasis peristiwa (event-driven architecture) dapat meningkatkan skalabilitas karena beban kerja tidak hanya bergantung pada satu subscriber. Dibandingkan dengan simulasi subscriber yang lambat, antrean diproses lebih cepat karena beberapa subscriber bekerja bersama-sama.
+
+Satu perbaikan yang mungkin dilakukan pada kode tersebut adalah menghindari penggunaan loop {} kosong yang tidak terbatas karena hal itu memboroskan sumber daya CPU. Perbaikan lainnya adalah menangani kesalahan (error handling) dengan benar alih-alih hanya menggunakan unwrap(). Bagian publisher juga dapat ditingkatkan dengan menggunakan perulangan (loop) atau membaca data pengguna dari input eksternal, daripada menulis lima pernyataan publish secara manual.
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
