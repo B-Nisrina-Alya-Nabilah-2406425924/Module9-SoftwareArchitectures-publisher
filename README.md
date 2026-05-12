@@ -16,3 +16,7 @@ Publisher akan mengirim 5 event/message dalam satu kali program dijalankan, kare
 program, what does it mean**
 
 Artinya publisher dan subscriber terhubung ke RabbitMQ yang sama, yaitu RabbitMQ yang berjalan di komputer lokal pada port 5672. Karena menggunakan username dan password yang sama, keduanya bisa berkomunikasi melalui message broker yang sama.
+
+## RabbitMQ Management
+
+![rabbitmq](rabbitmq.png)
